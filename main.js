@@ -13,7 +13,7 @@ function setup() {
   canvas = createCanvas(640, 420);
   canvas.center();
   objectDetector = ml5.objectDetector('cocossd', modelLoaded);
-  document.getElementById("status").innerHTML = "Estatus : detectando objetos";
+  document.getElementById("status").innerHTML = "Estatus: detectando objetos";
 }
 
 function modelLoaded() {
@@ -37,7 +37,7 @@ function draw() {
       if(status != "")
       {
         for (var i = 0; i < objects.length; i++) {
-          document.getElementById("status").innerHTML = "Estatus : objeto detectado";
+          document.getElementById("status").innerHTML = "Estatus: objeto detectado";
     
           fill(255, 0, 0);
           percent = floor(objects[i].confidence * 100);
